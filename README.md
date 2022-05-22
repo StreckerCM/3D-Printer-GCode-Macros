@@ -16,6 +16,17 @@ M500                                      
 M117 Settings Stored
 ```
 
+### Quick Cool Down 
+```
+M117 Cool Down: Start
+M106 P0 S255                                        ; Set part fan to 100%
+M140 S0                                             ; Cool Down
+M109 R30
+M104 S0
+M107 P0                                             ; Fan Off
+M117 Cool Down: Done
+```
+
 ## Z-Probe
 
 ### Z-Probe Repeatability Test
