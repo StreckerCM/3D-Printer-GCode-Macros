@@ -38,8 +38,8 @@ M48 P10 X155 Y160 V2                              
 ```
 M117 Z Adjust: Start
 M117 Z Adjust: Warm Up Bed and Hotend
-M109 R215                                           ; set extruder temp
-M190 R60                                            ; wait for bed temp
+M109 S215                                           ; set extruder temp
+M190 S60                                            ; wait for bed temp
 M117 Z Adjust: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Z Adjust: Home all axes
@@ -60,8 +60,8 @@ This will only work if you have indipendent z stepper motors and have enabled G3
 ```
 M117 Z Auto-Align: Start
 M117 Z Auto-Align: Warm Up Bed and Hotend
-M109 R215                                           ; set extruder temp
-M190 R60                                            ; wait for bed temp
+M109 S215                                           ; set extruder temp
+M190 S60                                            ; wait for bed temp
 M117 Z Auto-Align: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Z Auto-Align: Home all axes
@@ -116,8 +116,8 @@ This is an example of how to activate UBL.  This can be modified to be used as p
 ```
 M117 Activate UBL: Start
 M117 Activate UBL: Warm Up Bed and Hotend
-M109 R215                                           ; set extruder temp
-M190 R60                                            ; wait for bed temp
+M109 S215                                           ; set extruder temp
+M190 S60                                            ; wait for bed temp
 M117 Activate UBL: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Activate UBL: Home all axes
@@ -136,8 +136,8 @@ This will heat the bed and perform the leveling measurements and save the mesh i
 ```
 M117 Bed Leveling: Start
 M117 Bed Leveling: Warm Up Bed and Hotend
-M109 R215                                           ; set extruder temp
-M190 R60                                            ; wait for bed temp
+M109 S215                                           ; set extruder temp
+M190 S60                                            ; wait for bed temp
 M117 Bed Leveling: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Bed Leveling: Home all axes
