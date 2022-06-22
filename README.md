@@ -21,7 +21,7 @@ M117 Settings Stored
 M117 Cool Down: Start
 M106 P0 S255                                        ; Set part fan to 100%
 M140 S0                                             ; Cool Down
-M109 R30
+G4 S360                                             ; Wait for 6 minutes
 M104 S0
 M107 P0                                             ; Fan Off
 M117 Cool Down: Done
@@ -38,8 +38,8 @@ M48 P10 X155 Y160 V2                              
 ```
 M117 Z Adjust: Start
 M117 Z Adjust: Warm Up Bed and Hotend
-M109 S215                                           ; set extruder temp
-M190 S60                                            ; wait for bed temp
+M109 R215                                           ; set extruder temp
+M190 R60                                            ; wait for bed temp
 M117 Z Adjust: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Z Adjust: Home all axes
@@ -60,8 +60,8 @@ This will only work if you have indipendent z stepper motors and have enabled G3
 ```
 M117 Z Auto-Align: Start
 M117 Z Auto-Align: Warm Up Bed and Hotend
-M109 S215                                           ; set extruder temp
-M190 S60                                            ; wait for bed temp
+M109 R215                                           ; set extruder temp
+M190 R60                                            ; wait for bed temp
 M117 Z Auto-Align: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Z Auto-Align: Home all axes
@@ -116,8 +116,8 @@ This is an example of how to activate UBL.  This can be modified to be used as p
 ```
 M117 Activate UBL: Start
 M117 Activate UBL: Warm Up Bed and Hotend
-M109 S215                                           ; set extruder temp
-M190 S60                                            ; wait for bed temp
+M109 R215                                           ; set extruder temp
+M190 R60                                            ; wait for bed temp
 M117 Activate UBL: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Activate UBL: Home all axes
@@ -128,7 +128,7 @@ M105 S0                                    �
 M140 S0
 G90                                                 ; use absolute coordinates
 G0 X155 Y160 Z50 F5000                              ; move hotend to bed center
-M117 Activate UBL: Dome
+M117 Activate UBL: Done
 ```
 
 #### Heat & Level Bed S0
@@ -136,8 +136,8 @@ This will heat the bed and perform the leveling measurements and save the mesh i
 ```
 M117 Bed Leveling: Start
 M117 Bed Leveling: Warm Up Bed and Hotend
-M109 S215                                           ; set extruder temp
-M190 S60                                            ; wait for bed temp
+M109 R215                                           ; set extruder temp
+M190 R60                                            ; wait for bed temp
 M117 Bed Leveling: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
 M117 Bed Leveling: Home all axes
