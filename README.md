@@ -1,7 +1,12 @@
 # 3D-Printer-GCode-Macros
 I have collected this set of helpful commands and scripts for use with a marlin-based 3D printer.  They may work with other firmware as well.
 
-> **_NOTE:_** I wrote these scripts intending to save them to an Octoprint macro plugin. I added M117 lines to the longer one to update the printer display with the current script step. If you are typing the commands manually, please skip the M117 commands.
+> **_NOTES:_** 
+
+<ol>
+  <li>I wrote these scripts intending to save them to an Octoprint macro plugin. I added M117 lines to the longer one to update the printer display with the current script step. If you are typing the commands manually, please skip the M117 commands.</li>
+  <li>If your firmware has PRINTJOB_TIMER_AUTOSTART enabled make sure to include the M77 command after any macros with moves.</li>
+</ol> 
 
 ## Basic Operations
 
@@ -31,7 +36,7 @@ M117 Cool Down: Done
 
 ### Z-Probe Repeatability Test
 ```
-M48 P10 X155 Y160 V2                                ; Probe Repeatability Test
+M48 P10 X155 Y160 V2                                ; Probe Repeatability Test (change X and Y for your printer)
 ```
 
 ## Prep for Z Adjust
@@ -50,8 +55,9 @@ M117 Z Adjust: Enable UBL
 G29 A L0 F0 J2                                      ; Activate the UBL System from slot 0 mesh with 0 fade height and 4 point tilt
 M117 Z Adjust: Move to the calibration point
 G90                                                 ; use absolute coordinates
-G0 X155 Y160 F5000                                  ; move hotend to bed center
+G0 X155 Y160 Z50 F5000                              ; move hotend to bed center (change X and Y for your printer)
 G0 Z0.2                                             ; Lower Z-axis to the feeler reference height
+M77                                                 ; Stop the print job timer
 M117 Z Adjust: Ready for z-offset adjustment
 ```
 
@@ -72,7 +78,8 @@ M500                                      
 M105 S0                                             ; Cool Down
 M140 S0
 G90                                                 ; use absolute coordinates
-G0 X155 Y160 Z50 F5000                              ; move hotend to bed center
+G0 X155 Y160 Z50 F5000                              ; move hotend to bed center (change X and Y for your printer)
+M77                                                 ; Stop the print job timer
 M117 Z Auto-Align: Done
 ```
 
@@ -127,7 +134,8 @@ G29 A L0 F0 J2                                 
 M105 S0                                             ; Cool Down
 M140 S0
 G90                                                 ; use absolute coordinates
-G0 X155 Y160 Z50 F5000                              ; move hotend to bed center
+G0 X155 Y160 Z50 F5000                              ; move hotend to bed center (change X and Y for your printer)
+M77                                                 ; Stop the print job timer
 M117 Activate UBL: Done
 ```
 
@@ -161,7 +169,8 @@ M117 Bed Leveling: Turn Off Heaters
 M105 S0                                             ; Cool Down
 M140 S0
 G90                                                 ; use absolute coordinates
-G0 X155 Y160 Z50 F5000                              ; move hotend to bed center
+G0 X155 Y160 Z50 F5000                              ; move hotend to bed center (change X and Y for your printer)
+M77                                                 ; Stop the print job timer
 M117 Bed Leveling: Done
 ```
 
