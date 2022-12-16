@@ -2,11 +2,10 @@
 I have collected this set of helpful commands and scripts for use with a marlin-based 3D printer.  They may work with other firmware as well.
 
 > **_NOTES:_** 
-
-<ol>
-  <li>I wrote these scripts intending to save them to an Octoprint macro plugin. I added M117 lines to the longer one to update the printer display with the current script step. If you are typing the commands manually, please skip the M117 commands.</li>
-  <li>If your firmware has PRINTJOB_TIMER_AUTOSTART enabled make sure to include the M77 command after any macros with moves.</li>
-</ol> 
+> <ol>
+>   <li>I wrote these scripts intending to save them to an Octoprint macro plugin. I added M117 lines to the longer one to update the printer display with the current script step. If you are typing the commands manually, please skip the M117 commands.</li>
+>   <li>If your firmware has PRINTJOB_TIMER_AUTOSTART enabled make sure to include the M77 command after any macros with moves.</li>
+> </ol> 
 
 ## Basic Operations
 
