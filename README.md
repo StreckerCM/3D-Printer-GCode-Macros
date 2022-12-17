@@ -91,7 +91,7 @@ M301                                      
 M117 PID Tune End: Set Part Fan to 50%
 M106 P0 S128                                        ; Set part fan to 50%
 M117 PID Tune End: Auto-tune 215C for 10 cycles
-M303 C10 S215 E0 U                                  ; Auto-tune 215C for 10 cycles
+M303 C10 S215 E0 U1                                 ; Auto-tune 215C for 10 cycles
 M117 PID Tune End: Save settings
 M500                                                ; Save settings
 M117 PID Tune End: Fan Off
@@ -106,7 +106,7 @@ M304                                      
 M117 PID Tune Bed: Set Part Fan to 50%
 M106 P0 S128                                        ; Set part fan to 50%
 M117 PID Tune Bed: Auto-tune 60C for 10 cycles
-M303 C10 S60 E-1 U                                  ; Auto-tune 60C for 10 cycles
+M303 C10 S60 E-1 U1                                 ; Auto-tune 60C for 10 cycles
 M117 PID Tune Bed: Save settings
 M500                                                ; Save settings
 M117 PID Tune Bed: Fan Off
