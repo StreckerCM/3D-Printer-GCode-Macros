@@ -42,7 +42,7 @@ M48 P10 X154.0 Y157.5 V2 L4                         ; 
 ```
 M117 Z Adjust: Start
 M117 Z Adjust: Warm Up Bed and Hotend
-M109 S215                                           ; set extruder temp
+M104 S215                                           ; set extruder temp
 M190 S60                                            ; wait for bed temp
 M117 Z Adjust: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
@@ -65,7 +65,7 @@ This will only work if you have indipendent z stepper motors and have enabled G3
 ```
 M117 Z Auto-Align: Start
 M117 Z Auto-Align: Warm Up Bed and Hotend
-M109 S215                                           ; set extruder temp
+M104 S215                                           ; set extruder temp
 M190 S60                                            ; wait for bed temp
 M117 Z Auto-Align: Allow temps to stabilize
 G4 S60                                              ; Allow temps to stabilize
